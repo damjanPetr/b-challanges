@@ -1,1 +1,31 @@
 @use "./variables" as var;
+@mixin flex {
+  display: flex;
+  @content;
+}
+
+@mixin text-content {
+}
+
+@mixin img-content {
+}
+
+@mixin button {
+  padding: var.$gutter-base/5;
+  font-size: var.$text-font-size-small;
+  background-color: #2690e5;
+  border-radius: 5px;
+  color: var.$text-color-base;
+  border: none;
+}
+
+@mixin tablet-styles {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile-styles {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}

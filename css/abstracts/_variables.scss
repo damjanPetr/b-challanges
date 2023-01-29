@@ -3,3 +3,20 @@
 @function rem-calc($size) {
   @return (math.div($size, 16)) * 1rem;
 }
+
+$gutter-base: rem-calc(30);
+
+$text-color-base: #fff;
+$text-color-secondary: #000;
+
+$text-font-size-small: rem-calc(16);
+$text-font-size-base: rem-calc(22);
+$text-font-size-medium: rem-calc(30);
+$text-font-size-large: rem-calc(40);
+$text-font-size-huge: rem-calc(50);
+
+$heading-font-size-small: rem-calc(25);
+$heading-font-size-base: rem-calc(30);
+$heading-font-size-medium: rem-calc(35);
+$heading-font-size-large: rem-calc(45);
+$heading-font-size-huge: rem-calc(70);

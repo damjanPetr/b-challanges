@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+footer {
+  background: #414a4f;
+  color: var.$text-color-base;
+  text-align: center;
+  text-transform: uppercase;
+  i {
+    margin-right: 10px;
+  }
+  .social-icons {
+    margin: 0 auto;
+    padding: 10px;
+    a {
+      i {
+        color: var.$text-color-base;
+      }
+    }
+  }
+  padding: var.$gutter-base;
+  .text-wrapper {
+    width: 30%;
+    color: #a1b7b2;
+    span {
+      a {
+        color: var.$text-color-base;
+      }
+    }
+  }
+}
