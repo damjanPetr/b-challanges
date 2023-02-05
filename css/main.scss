@@ -1,0 +1,10 @@
+// global styles
+@use "core";
+@use "components";
+
+// components styles
+
+.container {
+  display: flex;
+  justify-content: center;
+}

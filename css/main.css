@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.9375rem;
+  font-weight: 700;
+}
+
+.slides .img-container .imgcard .hide {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .slides .img-container .imgcard .hide {
+    width: 100%;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+.slides {
+  flex: 70%;
+}
+.slides .img-container {
+  display: flex;
+  flex-flow: wrap row;
+  transition: all 0.5s ease;
+}
+.slides .img-container .imgcard {
+  flex: 0 0 33%;
+  position: relative;
+}
+.slides .img-container .imgcard .hide {
+  text-align: center;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slides .img-container .imgcard:hover img {
+  display: none;
+}
+.slides .img-container .imgcard:hover .hide {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .slides .img-container .imgcard {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 425px) {
+  .slides .img-container .imgcard {
+    flex: 0 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+.text {
+  padding: 3.75rem;
+  flex: 30%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 3.75rem;
+}
+.text a {
+  text-decoration: none;
+}
+.text a:hover {
+  text-decoration: underline;
+}
+.text .logo {
+  margin: 10% auto;
+}
+.text .burgerlogo {
+  display: none;
+}
+.text ul {
+  list-style-type: none;
+  padding: 0;
+}
+.text ul li {
+  padding: 10px;
+}
+.text ul li a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #000;
+}
+.text h1 {
+  text-transform: uppercase;
+}
+.text .copyr {
+  margin-top: 11.25rem;
+}
+.text .copyr span {
+  font-weight: 700;
+}
+.text .copyr span:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .text {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .text .logo {
+    margin: 0;
+    padding-left: 2em;
+    width: 100%;
+  }
+  .text i {
+    font-weight: 700;
+    font-size: 1em;
+    padding: 1em;
+  }
+  .text .burgerlogo {
+    display: block;
+    border: 1px solid #000;
+  }
+  .text ul {
+    display: none;
+  }
+  .text .copyr {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,85 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+@include mix.tablet-styles {
+  .container {
+    flex-direction: column;
+  }
+}
+.text {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @include mix.pad1;
+  flex: 30%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: var.$gutter-base * 2;
+
+  .logo {
+    margin: 10% auto;
+  }
+  .burgerlogo {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      padding: 10px;
+
+      a {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: var.$text-color-base;
+      }
+    }
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .copyr {
+    margin-top: var.$gutter-base * 6;
+    span {
+      font-weight: var.$font-weight-bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  @include mix.tablet-styles {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    .logo {
+      margin: 0;
+      padding-left: 2em;
+      width: 100%;
+    }
+    i {
+      font-weight: var.$font-weight-bold;
+      font-size: 1em;
+      padding: 1em;
+    }
+    .burgerlogo {
+      display: block;
+      border: 1px solid #000;
+    }
+    ul {
+      display: none;
+    }
+    .copyr {
+      display: none;
+    }
+  }
+}
