@@ -1,4 +1,4 @@
-Challenge05-Git
+Challenge06-Git
 
 The task for Challenge 5 was to create a project where we would store all our previously done challenges in separate branches with appropriate names ,while  the main branch with only the README.md file. After that we were tasked with documenting the process in the README.md file of branch CHALLENGE 6(this file). 
 Here are the steps i took to arrive at the solution:
