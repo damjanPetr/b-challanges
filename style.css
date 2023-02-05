@@ -1,0 +1,336 @@
+body {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+/* bootstraplike classes */
+
+.flex {
+  display: flex;
+}
+
+.w-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+.c-lightgray {
+  background-color: rgb(246, 246, 246);
+}
+
+.c-dark-btn {
+  background-color: rgb(48, 47, 47);
+}
+.c-red {
+  background-color: rgb(255, 84, 68);
+}
+.c-purple {
+  background-color: rgb(170, 45, 182);
+}
+.c-cyan {
+  background-color: rgb(30, 194, 164);
+}
+.c-blue {
+  background-color: rgb(39, 139, 224);
+}
+
+.c-box-shadow {
+}
+.c-social {
+  background-color: #464646;
+}
+.c-btn-hover {
+  background-color: rgb(45, 45, 45);
+}
+
+/* ----------------------------------------- */
+.nav {
+}
+.bar {
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 3em;
+  padding: 20px;
+}
+
+.nav-elements {
+  flex-wrap: wrap;
+  flex-shrink: 3;
+  list-style: none;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 1.2em;
+}
+.nav-elements a {
+  color: #000;
+}
+.nav-elements li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.nav-darrow i {
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+.hamburger {
+  display: none;
+  font-size: 2em;
+}
+/*  */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: rgb(45, 45, 45);
+  color: #fff;
+  text-align: center;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  color: #000;
+}
+
+/* MAIN below nav bar */
+.main-title {
+  text-transform: uppercase;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-title h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.main-title p {
+}
+.main-title > * {
+  margin: 10px;
+}
+.main-title a {
+  padding: 1em;
+  color: #fff;
+}
+.box-sect {
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.boxes {
+  flex: 0 1 20%;
+  padding: 50px 0px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.3em;
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+  border-radius: 5%;
+}
+/* chose your demo section
+ */
+.view-sect {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.view-sect h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  padding: 30px;
+}
+.view-sect ul {
+  list-style: none;
+  padding: 0;
+}
+.view-sect ul li {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+}
+
+.view-sect ul li:hover {
+  background: rgb(45, 45, 45);
+  color: #fff;
+}
+
+.view-sect ul li:first-child {
+  color: #fff;
+  background-color: rgb(48, 47, 47);
+}
+
+.img-container {
+  margin: 100px auto 50px;
+  flex-wrap: wrap;
+}
+.img-container div {
+  flex: 0 1 33.33%;
+  padding: 40px;
+}
+.img-container img {
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+}
+.img-container div img:hover {
+  border: 2px solid #000;
+}
+.view-sect3 {
+  text-align: center;
+  padding: 100px;
+}
+.view-sect3 h2 {
+  padding: 10px;
+  font-size: 1.8em;
+}
+
+.view-sect3 > p {
+  padding: 30px;
+}
+.view-sect3 ul {
+  /* flex-flow: column; */
+  flex-wrap: wrap;
+  /* padding: 10px; */
+}
+.view-sect3 ul li {
+  text-transform: uppercase;
+  text-align: left;
+  flex: 0 1 33.33%;
+  list-style: none;
+  padding: 10px;
+  line-height: 2em;
+}
+.view-sect3 ul li::before {
+  content: url(./images/arrow.png);
+  padding: 5px;
+  margin-right: 4px;
+}
+
+.social {
+  margin: 0 auto;
+  padding: 100px;
+  text-align: center;
+  color: #fff;
+  background: #464646;
+}
+.social h2 {
+  margin: 0 auto;
+  font-size: 1.7em;
+  padding: 30px;
+  font-weight: 700;
+}
+.social p {
+  display: inline-block;
+  font-size: 2em;
+}
+.social i {
+  padding: 5px;
+}
+.social i:hover {
+  color: rgb(48, 47, 47);
+}
+.bot-foot {
+  justify-content: space-between;
+  padding: 40px;
+  background: #000;
+  color: #fff;
+  align-items: center;
+}
+
+@media (max-width: 425px) {
+  .nav {
+    width: 100%;
+  }
+  .bar {
+    width: 100%;
+    margin: 0;
+  }
+  .navlist {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .main-title {
+    padding: 100px;
+    text-align: center;
+  }
+  .box-sect {
+    flex-direction: column;
+  }
+  .box-sect .boxes {
+    margin: 1em;
+  }
+  .view-sect ul {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .view-sect2 .img-container {
+    flex-direction: column;
+  }
+  .view-sect2 .img-container div {
+    padding: 1em;
+  }
+  .view-sect3 {
+    padding: 0px;
+  }
+  .view-sect3 ul {
+    display: flex;
+  }
+  .view-sect3 ul li {
+    flex: 0 0 50%;
+  }
+  .social {
+    padding: 50px 10px;
+  }
+
+  .bot-foot {
+    padding: 30px;
+    font-size: 0.8em;
+  }
+}
