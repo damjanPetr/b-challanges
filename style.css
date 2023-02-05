@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+.c-darkblue {
+  background: rgba(39, 40, 51, 1);
+}
+
+/* header */
+header {
+  position: relative;
+}
+
+/* navigation bar */
+
+.nav {
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+}
+.nav label {
+  font-size: bold;
+  margin-left: 50px;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 10px 0;
+  margin-right: 20px;
+}
+
+.nav span {
+  background-color: #e44c65;
+  border-radius: 5%;
+  padding: 5px 10px;
+}
+a:hover {
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* titles in navigation bar */
+.title {
+  font-size: 1.4em;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrow {
+  font-size: 50px;
+  position: absolute;
+  color: #fff;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-10px, -50%);
+}
+/* CONTENT */
+
+.img-banner1,
+.img-banner2,
+.img-banner3 {
+  position: relative;
+}
+
+.inner-content {
+  background-color: rgba(39, 40, 51, 0.85);
+  position: absolute;
+  line-height: 1.6em;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.inner-content h2 {
+  font-size: 1.3em;
+}
+.inner-content h3 {
+  font-size: 0.9em;
+  margin-top: 50px;
+  text-decoration: none;
+}
+
+.img-banner1 {
+  height: 100vh;
+  background: url(./images/picture1.jpg) center/cover no-repeat fixed;
+}
+
+.img-banner1 .inner-content {
+  border-top: 5px solid #e44c65;
+  bottom: 0%;
+  width: 100%;
+  padding-top: 70px;
+  padding-left: 20px;
+}
+
+.img-banner1 .inner-content > * {
+  float: left;
+  width: 33.33%;
+  padding: 30px;
+}
+
+.img-banner2 {
+  height: 100vh;
+  background: url(./images/picture2.jpeg) center/cover no-repeat fixed;
+
+  /* background-size: cover; */
+}
+
+.img-banner2 .inner-content {
+  border-left: 5px solid rgb(93, 93, 238);
+  right: 0%;
+  width: 35%;
+  height: inherit;
+  padding: 90px 60px;
+}
+.img-banner2 button:hover {
+  border: 2px solid rgb(93, 93, 238);
+}
+.img-banner3 {
+  height: 100vh;
+  background: url(./images/picture3.jpg) center/cover no-repeat fixed;
+}
+
+.img-banner3 .inner-content {
+  border-right: 5px solid rgb(45, 212, 81);
+  left: 0%;
+  height: inherit;
+  width: 35%;
+  padding: 90px 60px;
+}
+.img-banner3 button:hover {
+  border: 2px solid rgb(45, 212, 81);
+}
+main button {
+  padding: 15px;
+  background-color: transparent;
+  color: #c6c6c8;
+  border: 1px solid #c6c6c8;
+  width: 30%;
+  border-radius: 3px;
+}
+.img-bg {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.products {
+  width: 100%;
+  text-align: center;
+  background: rgba(39, 40, 51, 1);
+  padding: 50px 50px;
+}
+
+.products h2 {
+  font-size: 1.3em;
+}
+.products h3 {
+  font-size: 0.9em;
+  margin-top: 50px;
+  text-decoration: none;
+}
+hr {
+  margin-top: 50px;
+  width: 50%;
+  border: 2px solid #e44c65;
+  background-color: #e44c65;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items {
+  flex: 0 0 33.33%;
+  padding: 40px;
+  text-align: center;
+}
+.items i {
+  height: 80px;
+  width: 80px;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  line-height: 80px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.products button {
+  width: 10%;
+}
+.products button {
+  width: 10%;
+}
+.subs {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #e44c65;
+  font-size: 1.2em;
+}
+.socials {
+  padding: 100px 0;
+  text-align: center;
+  background-color: rgba(39, 40, 51, 1);
+}
+form {
+  width: 30%;
+  margin: 0 auto;
+}
+input {
+  background: transparent;
+  height: 40px;
+  width: 60%;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  border-color: #fff;
+}
+input::placeholder {
+  color: #fff;
+}
+input:focus {
+  border: 1px solid rgb(93, 93, 238);
+  outline: none;
+}
+form button {
+  height: 40px;
+  color: #e44c65;
+  margin-left: 30px;
+  background: #fff;
+  border: transparent;
+  border-radius: 5px;
+  padding: 10px 30px;
+  width: auto;
+}
+.socials i {
+  padding: 10px;
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 29px;
+}
+.socials span {
+  text-decoration: underline;
+}
