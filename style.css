@@ -1,0 +1,184 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding-bottom: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+/* up are default styles */
+
+header {
+  background-color: #638caa;
+}
+.nav {
+  width: 80%;
+  margin: 0px auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.nav-logo {
+  width: 60%;
+  float: left;
+}
+
+.nav-logo img {
+  padding-left: 50px;
+  width: 10%;
+}
+
+.nav-link {
+  width: 40%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  float: left;
+}
+.nav-link a {
+  padding-left: 10px;
+  color: white;
+}
+
+.nav-link a:hover {
+  color: red;
+}
+
+.header-img img {
+  margin: 0 auto;
+  display: block;
+  width: 30%;
+  padding-bottom: 10px;
+}
+
+main {
+  text-align: center;
+}
+
+main .category-column > * {
+  float: left;
+  width: 25%;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.category-column i {
+  display: block;
+  font-size: 50px;
+  margin: 10px;
+}
+.category-column a {
+  color: black;
+  text-decoration: none;
+}
+
+.category-column div {
+  padding: 20px 0px;
+}
+.category-column a:nth-child(1) {
+  background-color: #dbdbdb;
+}
+.category-column a:nth-child(2) {
+  background-color: #bcb9aa;
+}
+.category-column a:nth-child(3) {
+  background-color: #9ce0d1;
+}
+.category-column a:nth-child(4) {
+  background-color: #9aa7b8;
+}
+/* main content */
+.category-content {
+  color: #ffffff;
+}
+.wrapper1-outer {
+  background-color: #9aa7b8;
+}
+.wrapper2-outer {
+  background-color: #bcb9aa;
+}
+.wrapper3-outer {
+  background-color: #f09e84;
+}
+.wrapper1 div {
+  float: left;
+  width: 50%;
+  padding: 30px 0;
+}
+.inner {
+  /* padding: 0 50px; */
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.wrapper2 div {
+  float: left;
+  width: 50%;
+  padding: 30px 0;
+}
+.wrapper3 div {
+  float: left;
+  width: 50%;
+  padding: 30px 0;
+}
+
+.category-content div img {
+  width: 30%;
+}
+.content-pic-color {
+  background-color: #b7ced6;
+}
+
+/* Section  */
+.banner div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  float: left;
+  text-align: center;
+  width: 33.33%;
+}
+.banner p {
+  color: white;
+}
+
+.banner div:nth-child(1) {
+  background-color: #9aa7b8;
+}
+.banner div:nth-child(2) {
+  background: #bcb9aa;
+}
+.banner div:nth-child(3) {
+  background: #9ce0d1;
+}
+/* Footer */
+footer {
+  background-color: #638caa;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 40px;
+}
+footer a {
+  margin: 0 40px;
+  margin-left: 70px;
+  color: white;
+}
+footer div:last-child {
+  background-color: #514354;
+  font-size: 19px;
+  color: white;
+  margin-top: 65px;
+  padding: 10px 0;
+}
