@@ -1,0 +1,11 @@
+.bg-purple {
+  background: #4900d5;
+}
+.bg-gray2 {
+  background: #393939;
+}
+.section1 {
+  background: url(./images/home.jpg) center/cover rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+  height: 80vh;
+}
