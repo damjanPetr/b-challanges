@@ -1,5 +1,2 @@
-# BrainsterChallenges_DamjanPetrevskiFS10
+# Brainster Challenges 08 Bootstrap 
 
-# About Me
-* Damjan Petrevski
-* Full-stack Group 10
