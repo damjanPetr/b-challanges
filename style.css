@@ -1,0 +1,19 @@
+.carousel-inner .carousel-caption {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section3 {
+  background: url(./images/lights.jpg) fixed;
+}
+
+.section5 {
+  background: rgba(0, 0, 0, 0.5) url(./images/media.jpg) fixed;
+  background-blend-mode: darken;
+  z-index: 1;
+}
+
+.bg-black {
+  background-color: black;
+}
