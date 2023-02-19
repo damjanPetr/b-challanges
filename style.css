@@ -1,9 +1,17 @@
-.carousel-inner .carousel-caption {
+.caption-middle {
   bottom: auto;
-  top: 50%;
+  top: 20%;
+  transform: translateY(-50%);
+}
+.carousel-caption {
+  bottom: auto;
+  top: 20%;
   transform: translateY(-50%);
 }
 
+.img-move-top {
+  margin-top: -100px;
+}
 .section3 {
   background: url(./images/lights.jpg) fixed;
 }
@@ -16,4 +24,20 @@
 
 .bg-black {
   background-color: black;
+}
+.bg-gray {
+  background: #212121;
+}
+
+.hero {
+  background: url(./images/image1.jpg);
+  height: 60vh;
+}
+.corousel2 {
+}
+.faq {
+  min-height: 50vh;
+}
+.show {
+  transition: 0.3s transform ease-in-out;
 }
