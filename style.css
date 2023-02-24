@@ -1,21 +1,31 @@
-.caption-middle {
-  bottom: auto;
-  top: 20%;
-  transform: translateY(-50%);
-}
-.carousel-caption {
-  bottom: auto;
-  top: 20%;
-  transform: translateY(-50%);
+.navbar button {
+  text-shadow: none !important;
 }
 
+.caption-middle {
+  bottom: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* .carousel-caption {
+  bottom: auto;
+  top: 20%;
+  transform: translateY(-50%);
+} */
+
 .img-move-top {
-  margin-top: -100px;
+  transform: translateY(-100px);
+  max-width: 700px;
 }
 .section3 {
   background: url(./images/lights.jpg) fixed;
 }
-
+.h60 {
+  height: 60vh;
+}
+#carousel1 .carousel-inner .active {
+  height: 60vh;
+}
 .section5 {
   background: rgba(0, 0, 0, 0.5) url(./images/media.jpg) fixed;
   background-blend-mode: darken;
@@ -40,4 +50,13 @@
 }
 .show {
   transition: 0.3s transform ease-in-out;
+}
+.navbar .active {
+  border-left: 2px solid #ffff;
+}
+
+@media (max-width: 768px) {
+  .w100-section {
+    width: 100% !important;
+  }
 }
