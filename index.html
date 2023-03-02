@@ -63,7 +63,7 @@
 
     <!-- Carausel -->
 
-    <div id="carousel1" class="carousel slide" data-ride="carousel hero">
+    <div id="carousel1" class="carousel slide" data-ride="carousel hero ">
       <ol class="carousel-indicators">
         <li data-target="#carousel1" data-slide-to="0" class="active"></li>
         <li data-target="#carousel1" data-slide-to="1"></li>
@@ -72,12 +72,8 @@
 
       <div class="carousel-inner h60">
         <div class="carousel-item active">
-          <img
-            src="./images/image1.jpg"
-            class="d-block w-100 h-100"
-            alt="..."
-          />
-          <div class="carousel-caption caption-middle">
+          <img src="./images/image1.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption caption-middle d-none d-md-block">
             <h2 class="">First slide label</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
@@ -87,13 +83,9 @@
           </div>
         </div>
 
-        <div class="carousel-item h60">
-          <img
-            src="./images/image2.jpg"
-            class="d-block w-100 h-100"
-            alt="..."
-          />
-          <div class="carousel-caption caption-middle">
+        <div class="carousel-item">
+          <img src="./images/image2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption caption-middle d-none d-md-block">
             <h2>Second slide label</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
@@ -103,13 +95,9 @@
           </div>
         </div>
 
-        <div class="carousel-item h60">
-          <img
-            src="./images/image3.jpg"
-            class="d-block w-100 h-100"
-            alt="..."
-          />
-          <div class="carousel-caption caption-middle">
+        <div class="carousel-item">
+          <img src="./images/image3.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption caption-middle d-none d-md-block">
             <h2>Third slide label</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
@@ -141,9 +129,9 @@
     </div>
 
     <!-- SECTION2 -->
-    <div class="container-fluid">
-      <div class="row w-75 mx-auto p-5">
-        <div class="col-4 text-center">
+    <div class="col-12 container-fluid mt-5">
+      <div class="row mx-auto">
+        <div class="col-md-4 text-center">
           <i class="fa-solid fa-gear h3"></i>
           <p>Turning gears</p>
           <p>
@@ -151,7 +139,7 @@
             Adipiscing elit erant
           </p>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-12 col-md-4 text-center">
           <i class="fa-solid fa-cloud h3"></i>
           <p>Sending data</p>
           <p>
@@ -159,7 +147,7 @@
             Adipiscing elit erant
           </p>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-12 col-md-4 text-center">
           <i class="fa-solid fa-cart-shopping h3"></i>
           <p>Making money</p>
           <p>
@@ -183,9 +171,9 @@
     </div>
 
     <!-- SECTION4 -->
-    <div class="container-fluid w100-section">
-      <div class="row p-5 align-items-center w-75 mx-auto w100-section">
-        <div class="col-6 p-2">
+    <div class="container-fluid w-75 w100-section">
+      <div class="row p-5 align-items-center mx-auto w100-section">
+        <div class="col-12 col-sm-6 p-2">
           <h2>Lorem, ipsum.</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla
@@ -196,7 +184,7 @@
           </p>
           <a href="" class="btn btn-light border-danger">Learn More</a>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-sm-6">
           <img src="./images/laptop.png" alt="" class="w-100" />
         </div>
       </div>
@@ -214,7 +202,7 @@
     </div>
     <!-- MODAL -->
 
-    <div class="modal" tabindex="-1" id="video">
+    <div class="modal w-75 w100-section" tabindex="-1" id="video">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
@@ -232,15 +220,19 @@
       </div>
     </div>
     <!-- PHOTO GALERY -->
-    <div class="container-fluid p-5">
+    <div class="container-fluid p-5 w-75 w100-section">
       <div class="row">
         <div class="col-12 text-center">
           <h2>Photo Galery</h2>
           <p>Check out our photos.</p>
         </div>
-        <div class="container-fluid w-75">
-          <div class="row pb-3">
-            <div class="col-4" data-toggle="modal" data-target="#m1">
+        <div class="container-fluid">
+          <div class="row">
+            <div
+              class="col-12 col-sm-4 mb-3"
+              data-toggle="modal"
+              data-target="#m1"
+            >
               <img class="w-100" src="./images/1.png" alt="" />
             </div>
 
@@ -254,7 +246,11 @@
               </div>
             </div>
 
-            <div class="col-4" data-toggle="modal" data-target="#m2">
+            <div
+              class="col-12 col-sm-4 mb-3"
+              data-toggle="modal"
+              data-target="#m2"
+            >
               <img class="w-100" src="./images/2.png" alt="" />
             </div>
 
@@ -267,7 +263,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-4" data-toggle="modal" data-target="#m3">
+            <div
+              class="col-12 col-sm-4 mb-3"
+              data-toggle="modal"
+              data-target="#m3"
+            >
               <img class="w-100" src="./images/3.png" alt="" />
             </div>
 
@@ -283,7 +283,11 @@
           </div>
 
           <div class="row">
-            <div class="col-4" data-toggle="modal" data-target="#m4">
+            <div
+              class="col-12 col-sm-4 mb-3"
+              data-toggle="modal"
+              data-target="#m4"
+            >
               <img class="w-100" src="./images/4.png" alt="" />
             </div>
 
@@ -296,7 +300,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-4" data-toggle="modal" data-target="#m5">
+            <div
+              class="col-12 col-sm-4 mb-3"
+              data-toggle="modal"
+              data-target="#m5"
+            >
               <img class="w-100" src="./images/5.png" alt="" />
             </div>
 
@@ -309,7 +317,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-4" data-toggle="modal" data-target="#m6">
+            <div
+              class="col-12 col-sm-4 mb-3"
+              data-toggle="modal"
+              data-target="#m6"
+            >
               <img class="w-100" src="./images/6.png" alt="" />
             </div>
 
