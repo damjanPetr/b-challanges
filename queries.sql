@@ -57,9 +57,3 @@ order by 'avg grade';
 --  on a.id = ac.actor_id
 --  group by a.id)
 
-
-select *
-from oscar_winners as ow
-join actors as a 
-on ow.actor_id= a.id
-where a.birth_date in (select birth_date from actors) < '1950-01-01';

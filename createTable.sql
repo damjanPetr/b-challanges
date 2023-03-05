@@ -97,5 +97,4 @@ CREATE TABLE movie_critique(
     movie_id INT,
     rating VARCHAR(255),
     FOREIGN key (movie_id) REFERENCES movies(id),
-    FOREIGN key (critic_id) REFERENCES critics(id)
-);
+    FOREIGN key (critic_id) REFERENCES critics(id);
