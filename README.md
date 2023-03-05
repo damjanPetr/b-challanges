@@ -1,5 +1,3 @@
-# BrainsterChallenges_DamjanPetrevskiFS10
+# Challenge 09_MySQL
 
-# About Me
-* Damjan Petrevski
-* Full-stack Group 10
+In this week's challange we needed to simulate a functioning database for a movie preview website.
