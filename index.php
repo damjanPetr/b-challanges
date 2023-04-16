@@ -1,76 +1,104 @@
 <?php
-$name = 'Damjan';
-if ($name == 'Kathrin') {
-    echo "Hello Kathrin";
-} else {
-    echo "Nice name <br>";
-}
-echo "<hr>";
 
+// PART 1
+echo "<h3>Part 1</h3>";
 
-$rating = 6;
-$rated = true;
-
-if ($rating >= 1 && $rating <= 10 && is_int($rating) == 1) {
-    if ($rated == true) {
-        echo "You already voted <br>";
-    } else if ($rated != true) {
-        echo "Thanks for voting <br>";
-    }
-    echo "Thank you for rating <br>";
-} else {
-    echo 'Invalid rating, only numbers between 1 and 10.';
-}
-
-
-$hour = date('h');
-
-echo "<hr>";
-echo " <br>" . $hour;
-
-if ($hour <= 12) {
-    echo "Good morning Kathrin";
-} else if ($hour <= 12 && $hour >= 07) {
-    echo " Good afternoon Kathrin";
-} else if ($$hour >= 07) {
-    echo "Good evening Kathrin";
-}
-
-echo "<hr>";
-$voters_array = [
-    "Jonh" => [true, 10],
-    "Tesla" => [true, 2],
-    "Sandy" => [false, 4],
-    "Britney" => [true, 5],
-    "Belian" => [false, 8],
-    "Tom" => [true, 9],
-    "Calvin" => [true, 13],
-    "Sarah" => [true, 3],
-    "Alina" => [true, 2],
-    "Smith" => [false, 1],
-];
-foreach ($voters_array as $voter => $prop) {
-
-    if ($hour <= 12) {
-        echo "Good morning " . $voter . "<br>";
-    } else if ($hour <= 12 && $hour >= 07) {
-        echo " Good afternoon " . $voter . "<br>";
-    } else if ($$hour >= 07) {
-        echo "Good evening " . $voter . "<br>";
-    }
-    if ($prop[1] >= 1 && $prop[1] <= 10 && is_int($prop[1]) == 1) {
-
-        if ($prop[0] == true) {
-            echo "You already voted  with : " . $prop[1] . " <br>";
+function decimal_to_bin($arg)
+{
+    $binaryString = '';
+    while ($arg >= 1) {
+        if ($arg < 1) {
+            break;
         }
-        if ($prop[0] == false) {
-            echo "Thanks for voting with : " . $prop[1] . " <br>";
-        }
-        echo "<br>";
-
-    } else {
-        echo 'Invalid rating, only numbers between 1 and 10. <br><br>';
+        $s = ($arg % 2) ? '1' : '0';
+        $binaryString = $s . $binaryString;
+        $arg = $arg / 2;
     }
+    return $binaryString;
+}
+
+echo "Delimal to binary " . decimal_to_bin(155);
+
+echo "<hr>";
+
+function decimal_to_roman($num)
+{
+    $returnValue = '';
+    $map = [
+        'M' => 1000,
+        'CM' => 900,
+        'D' => 500,
+        'CD' => 400,
+        'C' => 100,
+        'XC' => 90,
+        'L' => 50,
+        'XL' => 40,
+        'X' => 10,
+        'IX' => 9,
+        'V' => 5,
+        'IV' => 4,
+        'I' => 1
+    ];
+
+    while ($num > 0) {
+        foreach ($map as $roman => $value) {
+            if ($num >= $value) {
+                $num -= $value;
+                $returnValue .= $roman;
+            }
+        }
+
+    }
+    return $returnValue;
 
 }
+
+echo "Delimal to roman " . decimal_to_roman(10);
+echo "<hr>";
+// PART 2
+echo "<h3>Part 2</h3>";
+// function binary_to_decimal($num)
+// {
+//     return
+// };
+
+
+function binary_to_roman($roman)
+{
+    $roman = strval($roman);
+    // var_dump($roman);
+    $map = [
+        'M' => 1000,
+        'CM' => 900,
+        'D' => 500,
+        'CD' => 400,
+        'C' => 100,
+        'XC' => 90,
+        'L' => 50,
+        'XL' => 40,
+        'X' => 10,
+        'IX' => 9,
+        'V' => 5,
+        'IV' => 4,
+        'I' => 1
+    ];
+
+    $result = 0;
+    foreach ($map as $key => $value) {
+        while (strpos($roman, $key) === 0) {
+            $result += $value;
+            $roman = substr($roman, strlen($key));
+        }
+
+    }
+    return $result;
+
+}
+echo "Roman to binary " . binary_to_roman(1010110);
+echo "<hr>";
+
+// PART 3
+echo "<h3>Part 3</h3>";
+echo "<hr>";
+
 ?>
