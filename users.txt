@@ -1,3 +1,2 @@
 
-idiot@gmail.com,idiot=$2y$10$7idOuO.lzLhi3V1/Rtzk3ODbAszjCg5dG/F34E49C69o6aJN4yjjO
-damjan@gmail.com,damjan=$2y$10$2LDZu1ElGjJzIOCu.4dRDeEo/2APReaIkUTlG6Gl66RF1W6rRFqOe
+damjan@gmail.com,damjan=$2y$10$zPbMsYPDZrHwv2baloDT3uWDUHaFLjRoS8Gnrq6csYbdIQYV/ASf2

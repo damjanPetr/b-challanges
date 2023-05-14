@@ -105,6 +105,14 @@ nav h1 {
   font-size: 1.1em;
   padding: 1em;
 }
+
+nav h1 span {
+  font-size: 1.2em;
+  padding: 10px;
+  text-decoration: purple underline 4px;
+  text-underline-offset: 7px;
+}
+
 .error {
   border-radius: 15px;
   position: absolute;

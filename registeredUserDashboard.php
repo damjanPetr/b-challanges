@@ -15,7 +15,7 @@ require __DIR__ . '/views/partials/head.php'; ?>
 
 <body>
     <nav>
-        <h1>Welcome User : <?= $username ?></h1>
+        <h1>Welcome User : <span> <?= $username ?></span></h1>
 
     </nav>
 
