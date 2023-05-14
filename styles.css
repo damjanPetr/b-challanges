@@ -46,9 +46,10 @@ p {
   margin: 2em;
   padding: 10px;
   background: #d35a5a;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-decoration: none;
   border-radius: 15px;
+  color: #fff;
 }
 
 .header {
@@ -56,7 +57,7 @@ p {
 }
 
 .wrapper-input {
-  z-index: 1;
+  /* z-index: 1; */
   /* width: 500px; */
   display: flex;
   flex-direction: column;
@@ -105,16 +106,54 @@ nav h1 {
   padding: 1em;
 }
 .error {
+  border-radius: 15px;
   position: absolute;
   left: 50%;
-  top: 70%;
-  transform: translate(-50%, -70%);
+  top: 90%;
+  transform: translate(-50%, -80%);
   text-align: center;
   /* color: red; */
-  width: 70%;
+  width: 90%;
   background: rgba(241, 26, 26, 0.423);
 }
 .error p {
-  font-size: 2em;
+  font-size: 1.8em;
   font-style: bolder;
+}
+
+.error-email {
+  position: absolute;
+  border-radius: 15px;
+
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -80%);
+  text-align: center;
+  width: 90%;
+  background: rgba(219, 242, 15, 0.423);
+}
+.error-email p {
+  font-size: 1.8em;
+
+  font-style: bolder;
+}
+
+@media screen and (max-width: 768px) {
+  .error {
+    left: 50%;
+    top: 97%;
+    transform: translate(-50%, -90%);
+  }
+  .error p {
+    font-size: 1.5em;
+  }
+
+  .error-email {
+    left: 50%;
+    top: 97%;
+    transform: translate(-50%, -90%);
+  }
+  .error-email p {
+    font-size: 1.5em;
+  }
 }
