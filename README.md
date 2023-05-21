@@ -1,5 +1,3 @@
 # BrainsterChallenges_DamjanPetrevskiFS10
 
-# About Me
-* Damjan Petrevski
-* Full-stack Group 10
+# CHEALLANGE 14 PHP OOP
