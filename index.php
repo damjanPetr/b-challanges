@@ -94,7 +94,7 @@ class Furniture
 }
 
 
-$table = new Furniture(1000, 500, 300);
+$table = new Furniture(1000, 577, 300);
 
 
 $table->setIs_for_seating(true);
@@ -104,7 +104,6 @@ $table->getIs_for_sleeping();
 // echo $table->area();
 
 // dd($table);
-
 
 
 
@@ -123,31 +122,58 @@ interface Printable
 
 class Sofa extends Furniture implements Printable
 {
+    public function __construct($height, $width, $length)
+
+    {
+        parent::__construct($height, $width, $length);
+
+        $this->height = $height;
+        $this->width = $width;
+        $this->length = $length;
+    }
     // private $height;
     // private $length;
     // private $width;
     public $seats;
     public $armrests;
     public $length_opened;
-    public function __construct($height, $width, $length)
+    // public function __construct($height, $width, $length)
 
-    {
-        $this->height = $height;
-        $this->width = $width;
-        $this->length = $length;
-    }
+    // {
+    //     $this->height = $height;
+    //     $this->width = $width;
+    //     $this->length = $length;
+    // }
+
+
+
+
+
     public function print()
     {
+        $this->sneakpeak();
+        if ($this->getIs_for_sleeping() === true) {
+            echo "sleeping only ,";
+        } else {
+            echo "sitting also ,";
+        }
+        echo $this->area();
+        echo "<br/>";
+    }
+    public function sneakpeak()
+    {
+        echo get_class($this) . ', ';
     }
     public function fullinfo()
     {
 
-        echo "Sofa" . $this->getIs_for_seating() . $this->width . $this->height;
+        echo $this->sneakpeak() . 'Width: ' . $this->width  . 'cm Height: ' . $this->height . 'cm Length: ' . $this->length;
+        echo "<hr/>";
     }
-    public function sneakpeak()
-    {
-        $productName = get_class($this);
-    }
+
+
+
+
     public function getSeats(): string
 
 
@@ -197,6 +223,7 @@ class Sofa extends Furniture implements Printable
 $SofaAvans = new Sofa(300, 300, 800);
 
 $SofaAvans->setIs_for_sleeping(false);
+$SofaAvans->setIs_for_seating(true);
 $SofaAvans->setLength_opened(139);
 $SofaAvans->setArmrests(3);
 $SofaAvans->setSeats(31);
@@ -205,8 +232,11 @@ $SofaAvans->area();
 $SofaAvans->volume();
 $SofaAvans->area_opened();
 
+
 $SofaAvans->setIs_for_sleeping(true);
 $SofaAvans->area_opened();
+$SofaAvans->print();
+$SofaAvans->fullinfo();
 
 
 // var_dump($SofaAvans);
@@ -224,29 +254,33 @@ class Bench extends Sofa implements Printable
     //     $this->width = $width;
     //     $this->length = $length;
     // }
-    public function print()
-    {
-    }
 
-    public function sneakpeak()
-    {
-        $productName = get_class($this);
-    }
-    public function fullinfo()
-    {
-
-        echo get_class($this) . $this->getIs_for_seating() . $this->width . $this->height;
-    }
 }
+
+$bench1 = new Bench(200, 350, 150);
+
+$bench1->setLength_opened(139);
+$bench1->setArmrests(3);
+$bench1->setSeats(31);
+$bench1->setIs_for_sleeping(false);
+$bench1->print();
+$bench1->fullinfo();
+
+// dd($bench1);
+
 
 class Chair extends Furniture implements Printable
 {
-    // public function __construct($height, $width, $length)
-    // {
-    // $this->height = $height;
-    // $this->width = $width;
-    // $this->length = $length;
-    // }
+    public function __construct($height, $width, $length)
+
+    {
+        parent::__construct($height, $width, $length);
+
+        $this->height = $height;
+        $this->width = $width;
+        $this->length = $length;
+    }
+
     public function print()
     {
         $this->sneakpeak();
@@ -256,21 +290,26 @@ class Chair extends Furniture implements Printable
             echo "sitting also ,";
         }
         echo $this->area();
+        echo "<br/>";
     }
     public function sneakpeak()
     {
-        echo get_class($this);
+        echo get_class($this) . ', ';
     }
     public function fullinfo()
     {
 
-        echo get_class($this) . $this->getIs_for_seating() . $this->width . $this->height;
+        echo $this->sneakpeak() . 'Width: ' . $this->width  . 'cm Height: ' . $this->height . 'cm Length: ' . $this->length;
+        echo "<hr/>";
     }
 }
 
 
 $chair1 = new Chair(300, 150, 50);
-$bench1 = new Bench(200, 350, 150);
 
-// dd($chair1);
-// dd($bench1);
+$chair1->setIs_for_sleeping(false);
+$chair1->print();
+$chair1->fullinfo();
+echo $chair1->volume();
+
+dd($chair1);
