@@ -157,7 +157,7 @@ class Sofa extends Furniture implements Printable
         } else {
             echo "sitting also ,";
         }
-        echo $this->area();
+        echo ' Area: ' . $this->area();
         echo "<br/>";
     }
     public function sneakpeak()
@@ -289,7 +289,7 @@ class Chair extends Furniture implements Printable
         } else {
             echo "sitting also ,";
         }
-        echo $this->area();
+        echo ' Area: ' . $this->area();
         echo "<br/>";
     }
     public function sneakpeak()
@@ -310,6 +310,6 @@ $chair1 = new Chair(300, 150, 50);
 $chair1->setIs_for_sleeping(false);
 $chair1->print();
 $chair1->fullinfo();
-echo $chair1->volume();
-
-dd($chair1);
+// echo $chair1->volume();
+// 
+// dd($chair1);
