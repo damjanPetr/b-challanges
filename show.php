@@ -57,7 +57,7 @@ class MarketStall
     public function addProductToMarket($product)
     {
 
-        $this->products[$product->name] = $product;
+        $this->products =  array_merge($this->products, $product);
     }
 
     public function getItem($item, $amount)
@@ -73,7 +73,7 @@ class MarketStall
 
 class Cart
 {
-    public array $cartItems = [];
+    private array $cartItems = [];
 
     public function addToCart($item)
     {
@@ -118,12 +118,12 @@ $salt = new Salt('Salt', 100, true);
 
 
 
-
 $marketStall1 = new MarketStall(['orange' => $orange, 'potato' => $potato, 'nuts' => $nuts]);
+$marketStall1->addProductToMarket(['salt' => $salt]);
 $marketStall2 = new MarketStall(['kiwi' => $kiwi, 'pepper' => $pepper, 'raspberry' => $raspberry]);
 
 
-$marketStall1->addProductToMarket($salt);
+// dd($marketStall1->products);
 
 // d($marketStall1->products);
 
@@ -132,12 +132,11 @@ $cart = new Cart();
 $cart->addToCart($marketStall1->getItem('orange', 3));
 $cart->addToCart($marketStall1->getItem('potato', 2));
 $cart->addToCart($marketStall1->getItem('nuts', 13));
+$cart->addToCart($marketStall1->getItem('salt', 9));
 $cart->addToCart($marketStall2->getItem('kiwi', 3));
 $cart->addToCart($marketStall2->getItem('pepper', 1));
 $cart->addToCart($marketStall2->getItem('raspberry', 8));
 
-
-// d($cart->cartItems);
 
 
 
