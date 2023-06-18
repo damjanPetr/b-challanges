@@ -9,15 +9,14 @@
 </head>
 
 <body>
-    <header>
-        <nav></nav>
-    </header>
+
     <div class="homepage ">
         <main class="column-area">
-            <form action="post">
+            <h2>You are one stop away from your website</h2>
+            <form action="createTemp.php" method="post">
                 <div class="column">
                     <div class="">
-                        <p>Provide a description of your company, something people should be aware of before they contact you:</p>
+                        <p>Provide general info for your Website</p>
                     </div>
                     <div class="">
                         <label for="coverImg">Cover Img Url</label>
@@ -36,8 +35,8 @@
                         <textarea id="about" name="about"></textarea>
                     </div>
                     <div class="">
-                        <label for="telNumebr">Your telephone Number</label>
-                        <input type="tel" id="telNumebr" name="telNumebr">
+                        <label for="telNumber">Your telephone Number</label>
+                        <input type="tel" id="telNumber" name="telNumber">
                     </div>
                     <div class="">
                         <label for="Location">Location</label>
@@ -45,9 +44,9 @@
                     </div>
                     <div class="">
                         <label for="services">Do you provide services or producs?</label>
-                        <select id="services" name="services">
+                        <select id="servicesOrProducts" name="servicesOrProducts">
                             <option value="services">Services</option>
-                            <option value="services">Products</option>
+                            <option value="products">Products</option>
 
                         </select>
                     </div>
@@ -60,33 +59,30 @@
                     </div>
                     <div class="">
 
-                        <label for="imgUrl">Image URL</label>
-                        <input type="text" id="imgUrl" name="imgUrl">
+                        <label for="imgUrl1">Image URL</label>
+                        <input type="text" id="imgUrl1" name="imgUrl1">
                     </div>
                     <div class="">
-                        <label for="descService">Description of service/product</label>
-                        <input type="text" id="descService" name="descService">
+                        <label for="descService1">Description of service/product</label>
+                        <input type="text" id="descService1" name="descService1">
                     </div>
                     <div class="">
-                        <label for="imgUrl">Image URL</label>
-                        <input type="text" id="imgUrl" name="imgUrl">
+                        <label for="imgUrl2">Image URL</label>
+                        <input type="text" id="imgUrl2" name="imgUrl2">
                     </div>
                     <div class="">
-                        <label for="descService">Description of service/product</label>
-                        <input type="text" id="descService" name="descService">
+                        <label for="descService2">Description of service/product</label>
+                        <input type="text" id="descService2" name="descService2">
                     </div>
                     <div class="">
-                        <label for="imgUrl">Image URL</label>
-                        <input type="text" id="imgUrl" name="imgUrl">
+                        <label for="imgUrl3">Image URL</label>
+                        <input type="text" id="imgUrl3" name="imgUrl3">
                     </div>
                     <div class="">
-                        <label for="descService">Description of service/product</label>
-                        <input type="text" id="descService" name="descService">
+                        <label for="descService3">Description of service/product</label>
+                        <input type="text" id="descService3" name="descService3">
                     </div>
                 </div>
-
-
-
                 <div class="column">
                     <div class="">
                         <p>Provide a description of your company, something people should be aware of before they contact you:</p>
@@ -108,6 +104,7 @@
                         <label for="instagram">Instagram</label>
                         <input type="text" id="instagram" name="instagram">
                     </div>
+                    <input type="submit" value="Submit">
                 </div>
             </form>
         </main>
