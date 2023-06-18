@@ -79,26 +79,25 @@ $result = $servicesOrProducts == 'services' ? 'Services' : 'Product';
             <div class="content1">
                 <div class="content__img">
                     <img src="<?= $imgUrl1 ?>" alt="">
-                    <div class="content__text">
-                        <p><?= $result ?> <?= $descService1 ?></p>
-                    </div>
+                </div>
+                <div class="content__text">
+                    <p><?= $result ?> <?= $descService1 ?></p>
                 </div>
             </div>
             <div class="content2">
                 <div class="content__img">
                     <img src="<?= $imgUrl2 ?>" alt="">
-                    <div class="content__text">
-                        <p><?= $result ?> <?= $descService2 ?></p>
-                    </div>
-
+                </div>
+                <div class="content__text">
+                    <p><?= $result ?> <?= $descService2 ?></p>
                 </div>
             </div>
             <div class="content3">
                 <div class="content__img">
                     <img src="<?= $imgUrl3 ?>" alt="">
-                    <div class="content__text">
-                        <p><?= $result ?> <?= $descService3 ?></p>
-                    </div>
+                </div>
+                <div class="content__text">
+                    <p><?= $result ?> <?= $descService3 ?></p>
                 </div>
             </div>
         </div>

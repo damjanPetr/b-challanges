@@ -9,7 +9,6 @@ use \Database\Connection;
 
 $post_array = $_POST;
 
-
 var_dump($post_array);
 $template = new Company(...$post_array);
 $template->create();

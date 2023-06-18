@@ -1,6 +1,6 @@
 # BrainsterChallenges_DamjanPetrevskiFS10
 
-# About Me
+## About Me
 
 - Damjan Petrevski
 - Full-stack Group 10

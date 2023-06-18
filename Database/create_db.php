@@ -1,27 +1,44 @@
 <?php
 
+require_once './Connection.php';
 
-$play = 'CREATE TABLE `challenge16`.`temp` (
-`coverImg` VARCHAR(255) UNSIGNED NOT NULL ,
-`mainPageTitle` VARCHAR(255) UNSIGNED NOT NULL ,
-`subtitleOfPage` VARCHAR(255) UNSIGNED NOT NULL ,
-`about` TEXT UNSIGNED NOT NULL ,
-`telNumber` VARCHAR(255) UNSIGNED NOT NULL ,
-`Location` VARCHAR(255) UNSIGNED NOT NULL ,
-`servicesOrProducts` VARCHAR(255) UNSIGNED NOT NULL ,
-`imgUrl1` VARCHAR(255) UNSIGNED NOT NULL ,
-`descService1` VARCHAR(255) UNSIGNED NOT NULL ,
-`imgUrl2` VARCHAR(255) UNSIGNED NOT NULL ,
-`descService2` VARCHAR(255) UNSIGNED NOT NULL ,
-`imgUrl2` VARCHAR(255) UNSIGNED NOT NULL ,
-`descService2` VARCHAR(255) UNSIGNED NOT NULL ,
-`imgUrl3` VARCHAR(255) UNSIGNED NOT NULL ,
-`descService3` VARCHAR(255) UNSIGNED NOT NULL ,
-`linkedin` TEXT UNSIGNED NOT NULL ,
-`facebook` VARCHAR(255) UNSIGNED NOT NULL ,
-`twitter` VARCHAR(255) UNSIGNED NOT NULL ,
-`instagram` VARCHAR(255) UNSIGNED NOT NULL ,
-`id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
-PRIMARY KEY (`id`)
-)
- ENGINE = InnoDB;';
+use \Database\Connection;
+
+try {
+    $table = "
+        CREATE TABLE `temp` (
+        `coverImg` varchar(255) NOT NULL,
+        `mainPageTitle` varchar(255) NOT NULL,
+        `subtitleOfPage` varchar(255) NOT NULL,
+        `about` text NOT NULL,
+        `telNumber` varchar(255) NOT NULL,
+        `Location` varchar(255) NOT NULL,
+        `servicesOrProducts` varchar(255) NOT NULL,
+        `imgUrl1` varchar(255) NOT NULL,
+        `descService1` varchar(255) NOT NULL,
+        `imgUrl2` varchar(255) NOT NULL,
+        `descService2` varchar(255) NOT NULL,
+        `imgUrl3` varchar(255) NOT NULL,
+        `descService3` varchar(255) NOT NULL,
+        `linkedin` text NOT NULL,
+        `facebook` varchar(255) NOT NULL,
+        `twitter` varchar(255) NOT NULL,
+        `instagram` varchar(255) NOT NULL,
+        `id` int(11) NOT NULL
+        )
+        ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+        ALTER TABLE `temp`
+        ADD PRIMARY KEY (`id`);
+
+        ALTER TABLE `temp`
+        MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+        COMMIT;";
+
+    $conn = new Connection();
+    $connection = $conn->getConnection();
+    $connection->exec($table);
+    $conn->destroy();
+} catch (\Throwable $e) {
+    echo $e;
+}

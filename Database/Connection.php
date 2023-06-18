@@ -24,10 +24,12 @@ class Connection
             echo "</pre>";
         }
     }
+
     public function getConnection()
     {
         return $this->connection;
     }
+
     public function destroy()
     {
 
