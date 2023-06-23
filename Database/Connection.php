@@ -1,5 +1,3 @@
-
-
 <?php
 
 namespace Database;
@@ -17,9 +15,12 @@ class Connection
     public function __construct()
     {
         try {
-            $this  = new \PDO('mysql:host=' . self::HOST . ';dbname=' . self::DB_NAME, self::USERNAME, self::PASSWORD);
+            $this->connection  = new \PDO('mysql:host=' . self::HOST . ';dbname=' . self::DB_NAME, self::USERNAME, self::PASSWORD);
         } catch (\Throwable $e) {
+
+            echo "<pre>";
             var_dump($e);
+            echo "</pre>";
         }
     }
     public function getConnection()
@@ -36,13 +37,4 @@ class Connection
     {
         return $this->connection->lastInsertId();
     }
-    public function query($sql)
-    {
-
-        $query = $this->connection->prepare($sql);
-        $query->execute();
-        return $query->fetchAll(\PDO::FETCH_ASSOC);
-    }
 }
-
-?>

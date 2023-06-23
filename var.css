@@ -1,0 +1,115 @@
+/* prettier-ignore */
+:root {
+  /* colors */
+  --c-carnation-pink-h: 338;
+  --c-carnation-pink-s: 100%;
+  --c-carnation-pink-l: 84%;
+  --c-uranian-blue-h: 208;
+  --c-uranian-blue-s: 97%;
+  --c-uranian-blue-l: 87%;
+
+  --c-light-sky-blue-h: 209;
+  --c-light-sky-blue-s: 100%;
+  --c-light-sky-blue-l: 82%;
+
+  --c-thistle-h: 278;
+  --c-thistle-s: 35%;
+  --c-thistle-l: 78%;
+
+  --c-blue-h: 211;
+  --c-blue-s: 90%;
+  --c-blue-l: 47%;
+
+  --c-dark-purle: 245;
+  --c-dark-purle: 32%;
+  --c-dark-purle: 21%;
+
+  --c-emerald-h: 134;
+  --c-emerald-s: 47%;
+  --c-emerald-l: 53%;
+
+  --c-rose-h: 340;
+  --c-rose-s: 82%;
+  --c-rose-l: 52%;
+
+  --c-carnation-pink: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) var(--c-carnation-pink-l) );
+  --c-carnation-pink-10: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) calc(var(--c-carnation-pink-l) + 5%));
+  --c-carnation-pink-20: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) calc(var(--c-carnation-pink-l) + 10%));
+  --c-carnation-pink-30: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) calc(var(--c-carnation-pink-l) + 15%));
+  --c-carnation-pink-40: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) calc(var(--c-carnation-pink-l) + 20%));
+  --c-carnation-pink-50: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) calc(var(--c-carnation-pink-l) + 25%));
+  --c-carnation-pink-60: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) calc(var(--c-carnation-pink-l) + 30%));
+  --c-carnation-pink-70: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) calc(var(--c-carnation-pink-l) + 35%));
+  --c-carnation-pink-80: hsl( var(--c-carnation-pink-h) var(--c-carnation-pink-s) calc(var(--c-carnation-pink-l) + 40%));
+
+  --c-rose: hsl(var(--c-rose-h) var(--c-rose-s) var(--c-rose-l));
+  --c-rose-10: hsl(var(--c-rose-h) var(--c-rose-s) calc(var(--c-rose-l) + 5%));
+  --c-rose-20: hsl(var(--c-rose-h) var(--c-rose-s) calc(var(--c-rose-l) + 10%));
+  --c-rose-30: hsl(var(--c-rose-h) var(--c-rose-s) calc(var(--c-rose-l) + 15%));
+  --c-rose-40: hsl(var(--c-rose-h) var(--c-rose-s) calc(var(--c-rose-l) + 20%));
+  --c-rose-50: hsl(var(--c-rose-h) var(--c-rose-s) calc(var(--c-rose-l) + 25%));
+  --c-rose-60: hsl(var(--c-rose-h) var(--c-rose-s) calc(var(--c-rose-l) + 30%));
+  --c-rose-70: hsl(var(--c-rose-h) var(--c-rose-s) calc(var(--c-rose-l) + 35%));
+  --c-rose-80: hsl(var(--c-rose-h) var(--c-rose-s) calc(var(--c-rose-l) + 40%));
+
+  --c-emerald: hsl(var(--c-emerald-h) var(--c-emerald-s) var(--c-emerald-l));
+  --c-emerald-10: hsl(var(--c-emerald-h) var(--c-emerald-s) calc(var(--c-emerald-l) + 5%));
+  --c-emerald-20: hsl(var(--c-emerald-h) var(--c-emerald-s) calc(var(--c-emerald-l) + 10%));
+  --c-emerald-30: hsl(var(--c-emerald-h) var(--c-emerald-s) calc(var(--c-emerald-l) + 15%));
+  --c-emerald-40: hsl(var(--c-emerald-h) var(--c-emerald-s) calc(var(--c-emerald-l) + 20%));
+  --c-emerald-50: hsl(var(--c-emerald-h) var(--c-emerald-s) calc(var(--c-emerald-l) + 25%));
+  --c-emerald-60: hsl(var(--c-emerald-h) var(--c-emerald-s) calc(var(--c-emerald-l) + 30%));
+  --c-emerald-70: hsl(var(--c-emerald-h) var(--c-emerald-s) calc(var(--c-emerald-l) + 35%));
+  --c-emerald-80: hsl(var(--c-emerald-h) var(--c-emerald-s) calc(var(--c-emerald-l) + 40%));
+
+  --c-dark-purle: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) var(--c-dark-purle-l) );
+  --c-dark-purle-10: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) calc(var(--c-dark-purle-l) + 5%) );
+  --c-dark-purle-20: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) calc(var(--c-dark-purle-l) + 10%) );
+  --c-dark-purle-30: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) calc(var(--c-dark-purle-l) + 15%) );
+  --c-dark-purle-40: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) calc(var(--c-dark-purle-l) + 20%) );
+  --c-dark-purle-50: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) calc(var(--c-dark-purle-l) + 25%) );
+  --c-dark-purle-60: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) calc(var(--c-dark-purle-l) + 30%) );
+  --c-dark-purle-70: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) calc(var(--c-dark-purle-l) + 35%) );
+  --c-dark-purle-80: hsl( var(--c-dark-purle-h) var(--c-dark-purle-s) calc(var(--c-dark-purle-l) + 40%) );
+
+  --c-blue: hsl(var(--c-blue-h) var(--c-blue-s) var(--c-blue-l));
+  --c-blue-10: hsl(var(--c-blue-h) var(--c-blue-s) calc(var(--c-blue-l) + 5%));
+  --c-blue-20: hsl(var(--c-blue-h) var(--c-blue-s) calc(var(--c-blue-l) + 10%));
+  --c-blue-30: hsl(var(--c-blue-h) var(--c-blue-s) calc(var(--c-blue-l) + 15%));
+  --c-blue-40: hsl(var(--c-blue-h) var(--c-blue-s) calc(var(--c-blue-l) + 20%));
+  --c-blue-50: hsl(var(--c-blue-h) var(--c-blue-s) calc(var(--c-blue-l) + 25%));
+  --c-blue-60: hsl(var(--c-blue-h) var(--c-blue-s) calc(var(--c-blue-l) + 30%));
+  --c-blue-70: hsl(var(--c-blue-h) var(--c-blue-s) calc(var(--c-blue-l) + 35%));
+  --c-blue-80: hsl(var(--c-blue-h) var(--c-blue-s) calc(var(--c-blue-l) + 40%));
+
+  --c-thistle: hsl(var(--c-thistle-h) var(--c-thistle-s) var(--c-thistle-l));
+  --c-thistle-10: hsl(var(--c-thistle-h) var(--c-thistle-s) calc(var(--c-thistle-l) + 5%));
+  --c-thistle-20: hsl(var(--c-thistle-h) var(--c-thistle-s) calc(var(--c-thistle-l) + 10%));
+  --c-thistle-30: hsl(var(--c-thistle-h) var(--c-thistle-s) calc(var(--c-thistle-l) + 15%));
+  --c-thistle-40: hsl(var(--c-thistle-h) var(--c-thistle-s) calc(var(--c-thistle-l) + 20%));
+  --c-thistle-50: hsl(var(--c-thistle-h) var(--c-thistle-s) calc(var(--c-thistle-l) + 25%));
+  --c-thistle-60: hsl(var(--c-thistle-h) var(--c-thistle-s) calc(var(--c-thistle-l) + 30%));
+  --c-thistle-70: hsl(var(--c-thistle-h) var(--c-thistle-s) calc(var(--c-thistle-l) + 35%));
+  --c-thistle-80: hsl(var(--c-thistle-h) var(--c-thistle-s) calc(var(--c-thistle-l) + 40%));
+
+  --c-light-sky-blue: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) var(--c-light-sky-blue-l) );
+  --c-light-sky-blue-10: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) calc(var(--c-light-sky-blue-l) + 5%) );
+  --c-light-sky-blue-20: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) calc(var(--c-light-sky-blue-l) + 10%) );
+  --c-light-sky-blue-30: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) calc(var(--c-light-sky-blue-l) + 15%) );
+  --c-light-sky-blue-40: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) calc(var(--c-light-sky-blue-l) + 20%) );
+  --c-light-sky-blue-50: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) calc(var(--c-light-sky-blue-l) + 25%) );
+  --c-light-sky-blue-60: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) calc(var(--c-light-sky-blue-l) + 30%) );
+  --c-light-sky-blue-70: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) calc(var(--c-light-sky-blue-l) + 35%) );
+  --c-light-sky-blue-80: hsl( var(--c-light-sky-blue-h) var(--c-light-sky-blue-s) calc(var(--c-light-sky-blue-l) + 40%) );
+
+  /* font size */
+  --fs-small: 1rem;
+  --fs-medium: 1.5rem;
+  --fs-large: 2rem;
+  --fs-xlarge: 3rem;
+
+  /* font width: ; */
+  --fw-base: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
