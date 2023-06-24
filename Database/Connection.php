@@ -16,7 +16,7 @@ class Connection
     {
         try {
             $this->connection  = new \PDO('mysql:host=' . self::HOST . ';dbname=' . self::DB_NAME, self::USERNAME, self::PASSWORD);
-        } catch (\Throwable $e) {
+        } catch (\PDOException $e) {
 
             echo "<pre>";
             var_dump($e);

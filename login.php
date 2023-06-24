@@ -1,5 +1,4 @@
 <?php
-
 require './Users/Users.php';
 
 use Users\Users as Users;
@@ -7,11 +6,10 @@ use Users\Users as Users;
 $username = $_POST['username'] ?? null;
 $password = $_POST['password'] ?? null;
 
-
 if (isset($username) && isset($password)) {
     require_once './Users/Users.php';
     $user = new Users($username, $password);
-    $lastUserId = $user->getLastId();
+
     if ($user->login()) {
         header('Location: ./dashboard.php');
     } else {

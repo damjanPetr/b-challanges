@@ -2,7 +2,10 @@
 
 namespace Users;
 
-require_once './Database/Connection.php';
+session_start();
+
+
+require_once __DIR__ . '/../Database/Connection.php';
 
 use Database\Connection as Connection;
 
@@ -19,39 +22,38 @@ class Users
     }
     public function login()
     {
-        $conn = new Connection();
-        $pdo = $conn->getConnection();
-        $sql = "SELECT * FROM users WHERE username = :username AND password = :password;";
 
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(['username' => $this->username, 'password' => $this->password]);
-        if (
 
-            $stmt->rowCount() > 0
-        ) {
 
-            session_start();
-            $_SESSION['username'] = $this->username;
-            return true;
-        } else {
-            $_SESSION['authError'] = "No authorization!";
-
-            return false;
+        try {
+            $conn = new Connection();
+            $pdo = $conn->getConnection();
+            $sql = "SELECT * FROM users WHERE username = :username AND password = :password;";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(['username' => $this->username, 'password' => $this->password]);
+            var_dump($stmt->rowCount());
+            if (
+                $stmt->rowCount() > 0
+            ) {
+                $_SESSION['username'] = $this->username;
+                return true;
+            } else {
+                $_SESSION['authError'] = "No authorization!";
+                return false;
+            }
+        } catch (\Throwable $e) {
+            var_dump($e->getMessage());
         }
     }
-    public function getUserByUsername($username): array
 
+    public function getUserByUsername(): array
     {
         $conn = new Connection();
         $pdo = $conn->getConnection();
         $sql = "SELECT * FROM users WHERE username = :username;";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(['username' => $username]);
+        $stmt->execute(['username' => $this->username]);
         $results = $stmt->fetchAll();
         return $results;
-    }
-    public function getLastId()
-    {
-        return;
     }
 }
