@@ -1,5 +1,5 @@
 <?php
-require './Users/Users.php';
+require_once './Users/Users.php';
 
 use Users\Users as Users;
 
@@ -16,7 +16,6 @@ if (isset($username) && isset($password)) {
         header('Location: ./login.php?error=1');
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -25,28 +24,35 @@ if (isset($username) && isset($password)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Login</title>
 </head>
 
 <body>
-    <form action="./login.php" method="post">
+    <?php include_once __DIR__ . '/partials/Header.php'; ?>
 
-        <div class="">
+    <div class="loginpage">
+        <form action="./login.php" method="post">
+            <div class="">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="">
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password">
+            </div>
+            <input type="submit" value="Login">
             <?php
             if (isset($_GET['error'])) {
-                echo "<h3>Wrong username or password</h3>";
+                echo "<div class='errorUsername'><p>Wrong username or password</p></div>";
             };
             ?>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-        </div>
-        <div class="">
-            <label for="password">Password:</label>
-            <input type="text" id="password" name="password">
-        </div>
-        <input type="submit" value="">
-    </form>
+        </form>
 
+    </div>
 </body>
+
+
 
 </html>

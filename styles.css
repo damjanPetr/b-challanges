@@ -163,21 +163,72 @@ ol {
 /* first page
  */
 .homepage,
+.thirdpage,
+.loginpage,
+.userSearchPage,
 .dashboardpage {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 6rem);
+}
+/* user searh page */
+.userSearchPage table {
+  padding: 5px;
+  text-align: center;
+  table-layout: fixed;
+  text-transform: capitalize;
+  border-collapse: collapse;
+  font-size: calc(var(--fs-small) + 0.5rem);
 }
 
+.userSearchPage thead tr td {
+  background-color: var(--c-dark-purle-80);
+}
+.userSearchPage table tr {
+  background-color: var(--c-light-sky-blue-80);
+}
+.userSearchPage table tr td {
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+/* user loginpage */
+.loginpage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  flex-basis: 50%;
+  color: var(--c-carnation-pink-10);
+}
+.loginpage form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.loginpage form div input {
+  margin-left: 2rem;
+}
+.loginpage form div label {
+  margin-right: 2rem;
+}
+.loginpage .errorUsername {
+  margin: 10px;
+  background-color: var(--c-rose-20);
+  border-radius: var(--bdr-lg);
+  color: #fff;
+}
 /*
-login nav
+login nav on homepage
 */
 header {
   font-size: var(--fs-medium);
   display: flex;
   align-items: center;
-  background-color: hsl(var(--c-blue-h) var(--c-blue-s) var(--c-blue-l) / 0.8);
+  background-color: var(--c-blue-30);
 }
 header .logo {
   margin-left: 2rem;
@@ -191,19 +242,26 @@ header .logo img {
   width: 6rem;
 }
 nav {
+  display: flex;
+  gap: 2rem;
   margin-left: auto;
   margin-right: 2rem;
 }
 
 nav .login {
-  padding: 0.5rem;
   border: 2px solid black;
   border-radius: var(--bdr-sm);
-  background-color: var(--c-carnation-pink);
+  background-color: var(--c-carnation-pink-70);
+  color: var(--c-carnation-pink-20);
 }
 nav .login a {
+  padding: 0.5rem;
   text-decoration: none;
   color: inherit;
+}
+nav .login:hover {
+  outline: 5px solid var(--c-carnation-pink-20);
+  cursor: pointer;
 }
 /*
 register section
@@ -236,10 +294,12 @@ register section
   outline: 1px solid var(--c-primary);
   gap: 20px;
 }
+
 .register form input[type="text"] {
   margin-top: 1rem;
   padding: 10px;
 }
+
 .register .search_btn {
   color: #fff;
   background-color: var(--c-light-sky-blue);
@@ -285,6 +345,9 @@ select {
   background-color: var(--c-rose-80);
 }
 
+.dashboardpage select {
+  text-transform: capitalize;
+}
 .dashboardpage form > div input:not([type="submit"]):focus {
 }
 
@@ -308,4 +371,66 @@ select {
   padding: 0.5rem 1rem;
   outline: 4px solid var(--c-);
   cursor: pointer;
+}
+.dashboardpage form .chassisError {
+  background-color: var(--c-rose-50);
+  font-size: var(--fw-base);
+  align-self: flex-end;
+  margin: 10px;
+  border-radius: var(--bdr-sm);
+  max-width: 50%;
+  text-decoration: underline;
+  padding: 3px;
+  border: none;
+}
+
+.tableiew {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.table-view .search {
+  width: 90%;
+  margin: 0 auto;
+}
+.table-view .search form {
+  padding: 10px;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.table-view table {
+  width: 90%;
+  margin: 0 auto;
+  background-color: hsla(
+    var(--c-light-sky-blue-h) var(--c-light-sky-blue-s)
+      calc(var(--c-light-sky-blue-l) + 80%) / 0.6
+  );
+}
+.table-view table thead {
+  line-height: 1;
+  font-size: var(--fs-small);
+  background-color: #fff;
+}
+.table-view table thead td {
+  text-align: center;
+  padding: 5px;
+}
+.available {
+  background-color: yellow;
+}
+.expired {
+  background-color: red;
+}
+.crudBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.crudBtns input {
+  flex: 1 1 100%;
+  border: none;
+  outline: none;
+  background-color: none;
 }

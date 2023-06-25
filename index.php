@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,21 +11,14 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="./assets/cars-low-resolution-logo-color-on-transparent-background.svg" alt="logo">
-        </div>
-        <nav>
-            <div class="login"><a href="./login.php">Login</a></div>
-        </nav>
-    </header>
+
+    <?php include_once __DIR__ . '/partials/Header.php'; ?>
     <div class="homepage">
         <div class="register">
             <h1 class="title">Vehicle Registration</h1>
-            <h3 class="subtitle">Enter your registration number to check its validity</h3>
-
-            <form action="" method="post">
-                <input type="text" name="reg_number" id="reg_number" placeholder="Registration number">
+            <h3 class="subtitle">Enter your vehicle registration number to check its validity</h3>
+            <form action="userSearch.php" method="post">
+                <input type="text" name="registration-number" id="reg_number" placeholder="Registration number">
                 <input type="submit" value="search" class="search_btn">
             </form>
         </div>

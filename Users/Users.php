@@ -53,7 +53,7 @@ class Users
         $sql = "SELECT * FROM users WHERE username = :username;";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['username' => $this->username]);
-        $results = $stmt->fetchAll();
+        $results = $stmt->fetch();
         return $results;
     }
 }
