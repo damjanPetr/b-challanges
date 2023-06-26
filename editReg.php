@@ -5,10 +5,10 @@ $id = $_POST['reg-id'] ?? null;
 
 use Vehicles\Vehicles as Vehicles;
 
+var_dump($_POST);
 $vehicle_model = Vehicles::getModels();
 $vehicle_type = Vehicles::getVehicleType();
 $vehicle_fuel_type = Vehicles::getFuelType();
-
 
 if (isset($_POST['vehicle-model'])) {
     $vehicle_model = $_POST['vehicle-model'];
@@ -37,9 +37,6 @@ if ($id) : ?>
                     } catch (\Throwable $e) {
                         var_dump($e->getMessage());
                     }
-                    echo "<pre>";
-                    var_dump($vehicles);
-                    echo "</pre>";
                     ?>
 
                     <?php foreach ($vehicles as $item => $value) :
@@ -53,7 +50,7 @@ if ($id) : ?>
                                     if ($value['model'] === $valueModel['model']) {
                                         echo "<option value='{$value['model']}' selected>{$value['model']}</option>";
                                     } else {
-                                        echo "<option value='{$value['model']}'>{$valueModel['model']}</option>";
+                                        echo "<option value='{$va['model']}'>{$valueModel['model']}</option>";
                                     }
                                 } ?>
                             </select>

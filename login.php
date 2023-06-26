@@ -49,7 +49,6 @@ if (isset($username) && isset($password)) {
             };
             ?>
         </form>
-
     </div>
 </body>
 

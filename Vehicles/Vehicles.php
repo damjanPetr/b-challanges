@@ -156,15 +156,20 @@ class Vehicles
     }
     static function updateVehicle($arg)
     {
-        $conn = new Connection();
-        $pdo = $conn->getConnection();
-        $sql = "UPDATE registrations SET model = :model, vehicle_type = :vehicle_type, vehicle_chasis_number = :vehicle_chasis_number, vehicle_production_year = :vehicle_production_year, vehicle_registration_number = :vehicle_registration_number, fuel_type = :fuel_type, register_date = :register_date WHERE id = :id;";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(['id' => $arg['id'], 'model' => $arg['vehicle-model'], 'vehicle_type' => $arg['vehicle-type'], 'vehicle_chasis_number' => $arg['vehicle-chas-number'], 'vehicle_production_year' => $arg['vehicle-prod-year'], 'vehicle_registration_number' => $arg['vehicle-reg-number'], 'fuel_type' => $arg['fuel-type'], 'register_date' => $arg['register-date']]);
-        if ($stmt->rowCount() > 0) {
-            return true;
-        } else {
-            return false;
+
+        try {
+            $conn = new Connection();
+            $pdo = $conn->getConnection();
+            $sql = "UPDATE registrations SET model = :model, vehicle_type = :vehicle_type, vehicle_chasis_number = :vehicle_chasis_number, vehicle_production_year = :vehicle_production_year, vehicle_registration_number = :vehicle_registration_number, fuel_type = :fuel_type, register_date = :register_date WHERE id = :id;";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(['id' => $arg['id'], 'model' => $arg['vehicle-model'], 'vehicle_type' => $arg['vehicle-type'], 'vehicle_chasis_number' => $arg['vehicle-chas-number'], 'vehicle_production_year' => $arg['vehicle-prod-year'], 'vehicle_registration_number' => $arg['vehicle-reg-number'], 'fuel_type' => $arg['fuel-type'], 'register_date' => $arg['register-date']]);
+            if ($stmt->rowCount() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Throwable $e) {
+            var_dump($e->getMessage());
         }
     }
 
@@ -194,6 +199,7 @@ class Vehicles
     }
     static function getVehicleByRegNumber($regNumber)
     {
+        $regNumber = trim($regNumber);
         $conn = new Connection();
         $pdo = $conn->getConnection();
         $sql = "SELECT * FROM registrations WHERE vehicle_registration_number = :vehicle_registration_number;";

@@ -3,16 +3,16 @@
 
 require_once __DIR__ . '/Vehicles/Vehicles.php';
 
-// var_dump(array_values($_POST));
+var_dump($_POST);
+// die();
 
 use Vehicles\Vehicles as Vehicles;
-// 
-var_dump($_POST['vehicle-model']);
+
 $result = Vehicles::updateVehicle($_POST);
 if (
     $result
 ) {
-    header('Location: ./dashboard.php');
+    header('Location: ./dashboard.php#table-view');
 } else {
-    echo "No id provided";
+    echo "ERROR";
 }

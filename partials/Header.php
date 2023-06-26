@@ -5,11 +5,26 @@
 
     </div>
     <nav>
-        <?php var_dump($_REQUEST); ?>
+        <?php
+        $usrsegments = explode('/', $_SERVER['REQUEST_URI']);
+        $lastURL = explode('?', end($usrsegments));
+        // function getLastIgnoreGet(array $args): string
+        // {
+        //     if ($lastURL = explode('?', end($arg))) {
+        //         return end($lastURL);
+        //     } else {
+        //         return $arg;
+        //     }
+        // };
+
+        if ($lastURL[0] !== 'dashboard.php' && isset($_SESSION['username'])) {
+            echo "<div class='login'><a href='./dashboard.php'>Dashboard</a></div>";
+        }
+
+        ?>
         <?php if (!isset($_SESSION['username'])) : ?>
             <div class="login"><a href="./login.php" tabindex="-1">Login</a></div>
         <?php else : ?>
-            <div class="login"><a href="./dashboard.php">Dashboard</a></div>
             <div class="login"><a href="./logout.php">Logout</a></div>
         <?php
         endif; ?>

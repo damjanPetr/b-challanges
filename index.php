@@ -11,15 +11,14 @@
 </head>
 
 <body>
-
     <?php include_once __DIR__ . '/partials/Header.php'; ?>
     <div class="homepage">
         <div class="register">
             <h1 class="title">Vehicle Registration</h1>
             <h3 class="subtitle">Enter your vehicle registration number to check its validity</h3>
             <form action="userSearch.php" method="post">
-                <input type="text" name="registration-number" id="reg_number" placeholder="Registration number">
-                <input type="submit" value="search" class="search_btn">
+                <input minlength="5" type="text" name="registration-number" id="reg_number" placeholder="Registration number">
+                <input type="submit" value="Search" class="search_btn">
             </form>
         </div>
     </div>

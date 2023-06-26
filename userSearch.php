@@ -27,14 +27,13 @@ $resultArray = Vehicles::getVehicleByRegNumber($registrationNumber);
             <table>
                 <thead>
                     <tr>
-                        <td>#</td>
-                        <td>Vehicle model</td>
-                        <td>Vehicle type</td>
-                        <td>Vehicle Chassis Number</td>
-                        <td>Vehicle production Year</td>
-                        <td>Registration Number</td>
-                        <td>Fuel Type</td>
-                        <td>Registered To</td>
+                        <th>Vehicle model</th>
+                        <th>Vehicle type</th>
+                        <th>Vehicle Chassis Number</th>
+                        <th>Vehicle production Year</th>
+                        <th>Registration Number</th>
+                        <th>Fuel Type</th>
+                        <th>Registered To</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,7 +50,6 @@ $resultArray = Vehicles::getVehicleByRegNumber($registrationNumber);
                                         echo "expired";
                                     }
                                     ?>">
-                            <td><?= $item['id'] ?></td>
                             <td><?= $item['model'] ?></td>
                             <td><?= $item['vehicle_type'] ?></td>
                             <td><?= $item['vehicle_chasis_number'] ?></td>
@@ -64,8 +62,15 @@ $resultArray = Vehicles::getVehicleByRegNumber($registrationNumber);
                 </tbody>
             </table>
         <?php else : ?>
-            <h1>No results found</h1>
+            <div class="text">
+                <h1 class="">No results found</h1>
+                <a href="index.php">
+                    <div class="back">
+                        <p>Go Back</p><img src="./assets/page-previous.svg" alt="go-back-btn">
+                    </div>
+                </a>
 
+            </div>
         <?php endif; ?>
 
     </div>
