@@ -20,7 +20,7 @@ for (let i = 10; i <= 100; i++) {
 
 const testPrimeNumber1 = 10;
 const testPrimeNumber2 = 5;
-const testPrimeNumber3 = 13;
+const testPrimeNumber3 = 12;
 
 const largestNumber = Math.max(
   testPrimeNumber1,
@@ -43,10 +43,10 @@ function testPrime(num) {
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
       console.log(`${num} is not a prime number`);
-      break;
+      return;
     } else {
       console.log(`${num} is a prime number`);
-      break;
+      return;
     }
   }
 }
