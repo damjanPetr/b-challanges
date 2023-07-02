@@ -43,10 +43,10 @@ function testPrime(num) {
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
       console.log(`${num} is not a prime number`);
-      return;
+      break;
     } else {
       console.log(`${num} is a prime number`);
-      return;
+      break;
     }
   }
 }
