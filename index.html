@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challange 19- books</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Book</th>
+          <th>Progress bar</th>
+        </tr>
+      </thead>
+      <tbody class="container"></tbody>
+    </table>
+    <form>
+      <div class="addNew">
+        <input
+          type="text"
+          placeholder="Book name"
+          name="bookName"
+          id="bookName"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Author name"
+          name="authorName"
+          id="authorName"
+          required
+        />
+        <input
+          type="number"
+          placeholder="Number of pages"
+          name="numberOfPages"
+          id="numberOfPages"
+          min="0"
+          required
+        />
+        <input
+          type="number"
+          placeholder="Current page"
+          min="0"
+          name="currentPage"
+          id="currentPage"
+          required
+        />
+        <button>Submit</button>
+      </div>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>

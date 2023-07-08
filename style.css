@@ -1,0 +1,85 @@
+body,
+html {
+  /* height: 100%; */
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  background: linear-gradient(to right, #fbc7d4, #9796f0);
+}
+
+body {
+  /* padding-top: 10rem; */
+  /* padding-bottom: 10rem; */
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.read {
+  background-color: rgb(62, 220, 62);
+}
+
+.notread {
+  background-color: rgb(238, 123, 123);
+}
+
+table {
+  margin: 0 auto;
+  /* border-collapse: collapse; */
+  /* border-spacing: 10; */
+}
+tbody {
+  background-color: hsla(267, 96%, 67%, 0.296);
+}
+
+thead {
+  padding: 10px;
+  background-color: hsla(266, 76%, 47%, 0.533);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+tr {
+  padding: 10px;
+}
+td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+td > ul > li:nth-last-of-type(1) {
+}
+td > ul > li:nth-last-of-type(2) {
+}
+td > ul > li:nth-last-of-type(3) {
+}
+
+.progress-bar {
+  height: 1.5rem;
+  border-radius: 10px;
+}
+
+.addNew {
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.addNew input {
+  padding: 1rem;
+  min-width: 300px;
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
