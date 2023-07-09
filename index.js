@@ -111,7 +111,7 @@ if (window.sessionStorage.getItem("newBook") !== null) {
 }
 
 const readStatus = (value) => {
-  if (value.maxPages >= value.onPage) {
+  if (value.maxPages <= value.onPage) {
     return `<li class="read" >You already read ${value.title} by ${value.author}</li>`;
   } else {
     return `<li class="notread" >You still need to read ${value.title} by ${value.author}</li>`;
