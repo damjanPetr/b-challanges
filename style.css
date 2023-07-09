@@ -10,22 +10,27 @@ html {
 }
 
 body {
-  /* padding-top: 10rem; */
-  /* padding-bottom: 10rem; */
+  margin: 3rem;
+  margin-bottom: 10rem;
 }
 ul,
 li {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin: 0.25rem;
 }
 
 .read {
-  background-color: rgb(62, 220, 62);
+  color: rgb(30, 255, 0);
+  font-weight: bold;
 }
 
 .notread {
-  background-color: rgb(238, 123, 123);
+  background-color: #170202a7;
+
+  color: rgb(245, 37, 37);
+  font-weight: bold;
 }
 
 table {
@@ -34,7 +39,7 @@ table {
   /* border-spacing: 10; */
 }
 tbody {
-  background-color: hsla(267, 96%, 67%, 0.296);
+  background-color: hsl(246, 66%, 82%);
 }
 
 thead {
@@ -52,16 +57,36 @@ td {
   padding: 10px;
 }
 
-td > ul > li:nth-last-of-type(1) {
+td > ul > li:nth-of-type(1) {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
-td > ul > li:nth-last-of-type(2) {
+td > ul > li:nth-of-type(2) {
+  color: #746c6c;
 }
-td > ul > li:nth-last-of-type(3) {
+td > ul > li:nth-of-type(3) {
+  border-radius: 5px;
+  background-color: #020a3b48;
+  padding: 5px;
 }
 
 .progress-bar {
-  height: 1.5rem;
-  border-radius: 10px;
+  /* height: 3.5rem; */
+  height: 5rem;
+  border-radius: 40px;
+}
+.progress-bar::-webkit-progress-bar {
+  background-color: hsla(0, 0%, 100%, 0.566);
+}
+
+.progress-bar::-webkit-progress-value {
+  background-image: linear-gradient(
+    to right,
+    hsl(233, 77%, 70%),
+    30%,
+    hsla(247, 100%, 50%, 0.884)
+  );
 }
 
 .addNew {

@@ -108,7 +108,6 @@ if (window.sessionStorage.getItem("newBook") !== null) {
   const newBookArray = window.sessionStorage.getItem("newBook");
 
   bookArray.push(JSON.parse(newBookArray));
-  console.log(bookArray.flat());
 }
 
 const readStatus = (value) => {
@@ -129,6 +128,12 @@ bookArray.flat().forEach(function (value, index) {
 
   const progresBar = document.createElement("progress");
   progresBar.classList.add("progress-bar");
+  progresBar.animate([{ opacity: 0 }, { opacity: 1 }], {
+    duration: 300,
+    delay: 200,
+    fill: "forwards",
+    easing: "ease-in-out",
+  });
   const progresBarValue = (value.onPage / value.maxPages) * 100;
   progresBar.setAttribute("value", progresBarValue);
   progresBar.setAttribute("max", "100");
