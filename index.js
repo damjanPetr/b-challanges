@@ -3,13 +3,13 @@ const bookArray = [
     title: "Children of the Corn",
     author: "Julia Spera",
     maxPages: 931,
-    onPage: 931,
+    onPage: 401,
   },
   {
     title: "Jellyfish (Meduzot)",
     author: "Jase Ygou",
-    maxPages: 141,
-    onPage: 938,
+    maxPages: 277,
+    onPage: 125,
   },
 
   {
@@ -22,7 +22,7 @@ const bookArray = [
     title: "From the Earth to the Moon",
     author: "Timoteo Mercey",
     maxPages: 100,
-    onPage: 589,
+    onPage: 39,
   },
   {
     title: "Final Destination 5",
@@ -108,7 +108,6 @@ if (window.sessionStorage.getItem("newBook") !== null) {
   const newBookArray = window.sessionStorage.getItem("newBook");
 
   bookArray.push(JSON.parse(newBookArray));
-  console.log(bookArray.flat());
 }
 
 const readStatus = (value) => {
@@ -129,6 +128,12 @@ bookArray.flat().forEach(function (value, index) {
 
   const progresBar = document.createElement("progress");
   progresBar.classList.add("progress-bar");
+  progresBar.animate([{ opacity: 0 }, { opacity: 1 }], {
+    duration: 300,
+    delay: 200,
+    fill: "forwards",
+    easing: "ease-in-out",
+  });
   const progresBarValue = (value.onPage / value.maxPages) * 100;
   progresBar.setAttribute("value", progresBarValue);
   progresBar.setAttribute("max", "100");
