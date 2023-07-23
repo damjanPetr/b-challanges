@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Challenge 20</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="main__start_page">
-        <h1>Welcome to Brainster's Trivia</h1>
-        <p>Click a button to begin</p>
-        <button id="startBtn">Start</button>
-      </div>
-      <script src="./main.js"></script>
+    <div class="main__start_page">
+      <h1>Welcome to Brainster's Trivia</h1>
+      <p class="animate__animated animate__bounce">Click a button to begin</p>
+      <button id="startBtn">Start</button>
     </div>
+    <div class="quiz-container" style="display: none"></div>
+    <script src="./main.js"></script>
   </body>
 </html>
