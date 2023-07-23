@@ -237,6 +237,7 @@ li {
 }
 
 .quiz-container button {
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   flex-basis: 35%;
   min-width: 13rem;
   min-height: 2rem;
@@ -347,4 +348,15 @@ tbody {
 
 .startAgainBtn {
   margin: 1rem auto;
+}
+
+.tog {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  inset: 0px;
+  background-color: #fff;
+  display: none;
+  background: no-repeat center
+    url("https://media.tenor.com/wfEN4Vd_GYsAAAAC/loading.gif") #fff;
 }

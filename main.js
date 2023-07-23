@@ -2,22 +2,31 @@ const questionsUrl = "https://opentdb.com/api.php?amount=20";
 const quizContainer = document.querySelector(".quiz-container");
 const startBtn = document.querySelector("#startBtn");
 const wcmScreen = document.querySelector(".main__start_page");
+const btns = document.querySelectorAll("button");
 
+const body = document.querySelector("body");
 let qArray = [];
+let toggle = document.createElement("div");
+toggle.classList.add("tog");
+// toggle.innerHTML = "";
+body.appendChild(toggle);
 
-window.addEventListener("load", (e) => {
-  function getData() {
-    const quizData = new Promise((res, req) => {});
-    const questions = fetch(questionsUrl)
-      .then((response) => response.json())
-      .then((data) => (qArray = data))
-      .then(() => {})
-      .catch((error) => console.error(error));
-  }
-  getData();
-});
+async function getData() {
+  toggle.style.display = "block";
+  const questions = await fetch(questionsUrl);
+  response = await questions.json();
+  toggle.style.display = "none";
+  return response;
+  // .then((response) => response.json())
+  // .then((data) => (qArray = data))
+  // .catch((error) => console.error(error));
+}
 
-startBtn.addEventListener("click", (e) => {
+startBtn.addEventListener("click", async (e) => {
+  await getData().then((res) => {
+    console.log("🚀 ~ file: main.js:24 ~ awaitgetData ~ res:", res);
+    qArray = res;
+  });
   if (wcmScreen !== null) {
     wcmScreen.style.display = "none";
   }
@@ -49,9 +58,17 @@ class render {
     });
 
     const table = document.createElement("table");
+    table.classList.add("animate__animated");
+    table.classList.add("animate__fadeIn");
+
     const totalBar = document.createElement("progress");
+
     totalBar.classList.add("bar");
+
+    totalBar.classList.add("animate__headShake");
+
     totalBar.setAttribute("max", 20);
+
     totalBar.setAttribute("min", 0);
     let numberOFCorrect = 0;
     render.logicArray.forEach((item) => {
@@ -69,7 +86,11 @@ class render {
     render.logicArray.forEach((item, index) => {
       const tr = document.createElement("tr");
       const questionTDNum = document.createElement("td");
+      if (index > 20) {
+        return;
+      }
       questionTDNum.innerText = `#${index + 1}`;
+
       item.GuessCorrect
         ? tr.classList.add("GuessCorrect")
         : tr.classList.add("GuessIncorrect");
@@ -77,6 +98,7 @@ class render {
       incorectTD.classList.add("incorTD");
       const correctTD = document.createElement("td");
       correctTD.classList.add("corTD");
+
       item.incorrect_answers.forEach((item, index) => {
         const div = document.createElement("div");
         const p = document.createElement("p");
@@ -133,11 +155,15 @@ class render {
     for (let index = 0; index < allQuestionsArary.length; index++) {
       const questionString = allQuestionsArary[index];
       const btn = document.createElement("button");
+      btn.classList.add("animate__animated");
+      btn.classList.add("animate__pulse");
+
       btn.innerText = questionString;
       qDiv.appendChild(btn);
 
       btn.addEventListener("click", (event) => {
         const chosen_answer = btn.innerText;
+
         const result = question.correct_answer === btn.innerText ? true : false;
         render.handleSubmit({
           incorrect_answers: question.incorrect_answers,
