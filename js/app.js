@@ -5,7 +5,7 @@ $(function () {
     let budgetValue = $("#budget-input").val();
     if (acc.setBudget(budgetValue)) {
       $("#budget-amount").text(acc.budget);
-      printBalance();
+      renderBalance();
     } else {
       $("#budget-feedback").text("Value cannot be empty or negative.");
       $("#budget-feedback").show();
@@ -15,7 +15,7 @@ $(function () {
   $("#expense-form").on("submit", function (e) {
     e.preventDefault();
 
-    let expense = new Expense(
+    let expense = new Cost(
       parseInt($("#amount-input").val()),
       $("#expense-input").val()
     );
@@ -24,10 +24,10 @@ $(function () {
       $("#expense-feedback").show();
     } else {
       acc.setTotalExpenses();
-      printTable();
+      renderTable();
       acc.setBalance();
-      printBalance();
-      $("#expense-amount").text(acc.totalExpense);
+      renderBalance();
+      $("#expense-amount").text(acc.total);
     }
     $("#amount-input").val("");
     $("#expense-input").val("");
@@ -36,9 +36,9 @@ $(function () {
   $(".expense-input").on("focus", focusHandler);
 });
 
-class Budget {
+class Calc {
   expenses = [];
-  totalExpense = null;
+  total = null;
   budget = null;
   balance = null;
   setBudget(budget) {
@@ -51,14 +51,13 @@ class Budget {
     }
   }
   setBalance() {
-    this.balance = this.budget - this.totalExpense;
+    this.balance = this.budget - this.total;
   }
   setTotalExpenses() {
-    this.totalExpense = 0;
+    this.total = 0;
     this.expenses.forEach((expense) => {
-      this.totalExpense += expense.amount;
+      this.total += expense.amount;
     });
-    // this.totalExpense += expenseObject.amount
   }
   addExpense(expenseObject) {
     if (expenseObject.amount != 0 && !isNaN(expenseObject.amount)) {
@@ -70,14 +69,24 @@ class Budget {
     }
   }
 }
-class Expense {
+class Cost {
   constructor(_amount, _description) {
     this.amount = _amount;
     this.description = _description;
   }
 }
 
-let acc = new Budget();
+let acc = new Calc();
+function delExpHandler(e) {
+  e = $(this);
+  let index = e.data("expense");
+  acc.expenses.splice(index, 1);
+  acc.setTotalExpenses();
+  renderTable();
+  acc.setBalance();
+  renderBalance();
+  $("#expense-amount").text(acc.total);
+}
 
 function focusHandler() {
   if ($(this).hasClass("expense-input")) {
@@ -86,19 +95,7 @@ function focusHandler() {
     $("#budget-feedback").hide();
   }
 }
-// delete Expense function
-function deleteExpHandler(e) {
-  e = $(this);
-  let index = e.data("expense");
-  acc.expenses.splice(index, 1);
-  acc.setTotalExpenses();
-  printTable();
-  acc.setBalance();
-  printBalance();
-  $("#expense-amount").text(acc.totalExpense);
-}
-// set Color of Balance respectively
-function printBalance() {
+function renderBalance() {
   if (acc.balance > 0) {
     $("#balance").removeClass("showGreen");
     $("#balance").removeClass("showBlack");
@@ -125,14 +122,12 @@ function editExpHandler(e) {
     .text()
     .split("-")[1];
   let index = $(this).data("expense");
-
   $("#amount-input").val(expAmount);
   $("#expense-input").val(expTitle);
   acc.expenses.splice(index, 1);
-  deleteExpHandler(e);
+  delExpHandler(e);
 }
-
-function printTable() {
+function renderTable() {
   if (acc.expenses.length === 1) {
     $("#expensesTable").html(`
                 <table class="table text-center ">
@@ -150,7 +145,7 @@ function printTable() {
   for (let i = 0; i < acc.expenses.length; i++) {
     let Row = `
         <tr class="expense-item">
-        <td class="expense-title ">- ${acc.expenses[i].description}</td>
+        <td class="expense-title ">-${acc.expenses[i].description}</td>
         <td class="expense-amount">${acc.expenses[i].amount}</td>
         <td class="flex">
             <p class="edit-icon" data-expense="${i}">
@@ -164,6 +159,6 @@ function printTable() {
         `;
     $("#expensesContent").append(Row);
   }
-  $(".delete-icon").on("click", deleteExpHandler);
+  $(".delete-icon").on("click", delExpHandler);
   $(".edit-icon").on("click", editExpHandler);
 }
